@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 1000px;
+            height: auto;
+            background: pink;
+        }
+        .box1{
+            width: 500px;
+            height: 200px;
+            background: yellow;
+        }
+        p{
+            width: 100px;
+            height: 100px;
+            background: bisque;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    aaa
+    <div class="box1">
+        <p>1</p>
+    </div>
+
+</div>
+</body>
+<script>
+
+    var oBox=document.getElementsByClassName("box")[0];
+//    oBox.append('<a href="">'+'k'+'</a>'); /*标签当文本输出*/
+
+    /*创建一个标签
+    * */
+
+    for(var i=0;i<5;i++){
+        var box1=document.createElement("div");/*创建需要放在循环里面 否则只能创建一个标签*/
+        box1.className="box1";
+        box1.innerHTML="<p>"+i+"</p>";/*里面的标签不需要创建*/
+        oBox.append(box1);
+    }
+</script>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: yellow;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box1"></div>
+
+
+<!--
+
+js   javascript
+<a href="javascript:;"> 就不会跳转页面</a>
+Javascript（网页的交互层/行为层）:组成：（ bom dom ECMAscript ）
+bom:  浏览器对象模型
+dom: 文本对象模型
+es :js的规范
+ecmascript：规范
+
+-->
+<!--关键字：变量名不能是这些字 var if else for...-->
+<!--保留字：将来可能会用到的关键字-->
+<!--我们在命名变量的时候 要避开关键字和保留字-->
+
+<!--
+
+
+关键字：var  if   else    for  while  switch  case  break   new
+    typeof   finally  return   void  catch   default   throw   delete
+    in   try   do  instanceof
+保留字：abstract  enum  int  short   boolean export  interface  static
+    byte extends  long  super char    final  native synchronized   class
+    float  package   throws   const   goto   private   transient   debugger
+    implements   protected    volatile   double  import  public
+
+
+
+
+-->
+
+
+<!--<input id="text" type="text"/> <input id="btn" type="button" value="改变文字"/>-->
+<!--<div class="box"></div>-->
+</body>
+<script>
+//    var oBtn=document.getElementById("btn");
+//    var oText=document.getElementById("text");
+//   // var lw= prompt("美美美~");
+//
+//
+//    oBtn.onclick=function(){
+//        oText.value="我最美~"
+//    };
+   // console.log(lw); /*出现输入框输入的内容*/
+//    直接量
+    //alert("123");/*输出字符串123*/
+    //alert(123);/*输出数字123*/
+    //alert("abc");
+    //alert(abc);/*报错*/
+//    如果输出需要输出引号 可以再包一个单引号 或者转译字符 \"双引号   \'单引号   \t缩进   \n换行
+
+//    字符串类型：string
+//    数值类型：number
+
+
+//    +的作用：
+    /*1.连接 连接两个字符串 或者其中一个是字符串
+     2.运算 两个数值*/
+
+//    变量：用来储存数据 值可以改变 变量声明关键字是var 赋值用=  将等号右边的结果赋值给左边的变量 （先运算出右边的结果）
+//    变量名必须由数字字母下划线$组成 且不能以数字开头 且不能为javascript的关键字和保留字   区分大小写
+
+
+//    typeof 返回数据类型
+
+//    NaN：not a number 非数字
+//    IsNaN  判读是否为数字 返回布尔值
+//    undefined 变量声明了 但是没有赋值
+//    null 空的对象 没声明
+
+//    var a=123;
+//    var b="123";
+//    console.log(a + a + a + b);/*369123*/
+//    console.log(b + a + a + a);/*123123123123*/
+//    console.log(typeof(a + a + a + b));/*string*/
+//    console.log(typeof(b + a + a + a));/*string*/
+
+
+//    %取余取模 10%3 结果1
+
+//    Math
+    /*
+    * Math.sqrt(3)   3的平方根
+    * Math.E   返回e的值
+    * Math.PI   返回圆周率的值
+    * Math.random() 生成0-1之间的一个随机数 大于等于0 小于1
+    * Math.min(x,y,z) 返回最小值
+    * Math.max(x,y,z) 返回最大值
+    * Math.abs(-5)  求绝对值
+    * Math.floor(.6)  向下取整 0
+    * Math.ceil(.6)  向上取整 1
+    * Math.round(.6)  四舍五入
+    * Math.pow(2,53)  2的53次幂
+    * Math.sin(x)	返回x的正弦。
+    * Math.tan(x)	返回x的正切
+    * Math.toSource()	返回该对象的源代码。
+    * */
+//    console.log(Math.E);
+//
+//    console.log(parseInt(Math.random() * 70) + 20);/*取20到90之间的一个数 取不到右极值*/
+//    console.log(parseInt(Math.random() * 40) - 20);/*取-20到20之间的一个数 取不到右极值*/
+//    parseInt直接抹掉小数点之后的 所以取不到右极值
+
+
+//    运算符的简写
+    /*a=1 b=2；
+    * a=a+2 a+=2
+    * a++ + b++ 先运算a+b 再自加
+    * a+ ++b   b先自加 再加a
+    * a++ + b++ +a+b   1+2+2+3
+    * ++a + ++b +a+b   2+3+2+3
+    * */
+
+
+//逻辑运算符：
+//    &&并且 一错都错
+//    ||或者 一对都对
+//    ！非
+//    逻辑运算符优先级：！>&&>||
+
+
+
+//    ==   只判断内容 不判断类型  "2"==2 是正确的
+//    ===    全等 不仅判断内容 而且判断类型   "2"===2 是错误的
+//    != 不关心类型 只判断内容
+//    !== 只要是内容或者类型不同 就返回true 否则false
+
+//    强制转换
+//    转数字
+    /*1.number(字符串/布尔值)
+    a.如果转换的内容可以转成数字，那么直接返回这个内容对应的数字
+    b.如果不可以 转换那么返回NaN
+    c.如果在内容中出现小数，那么小数会保留
+    d.如果内容为空，那么转化成0*/
+
+    /*2.parseInt()将内容转成Number
+     a如果转换的内容可以转成数字，那么直接返回这个内容对应的数字
+     b如果不可以 转换那么返回NaN
+     c如果在内容中出现小数，那么小数会被直接去掉 而不是四舍五入
+     d如果第一个字符是数字，则继续解析直至字符串解析完毕或者遇到一个非数字符号为止
+    */
+//    转字符串
+    /*1、toString()
+    * 直接调用这个变量的toString()方法可以将内容转成字符串
+    * 2、String()
+    * 直接将要转化的内容放在String后的括号中，就可以将内容转化成字符串
+    * 第一个方式就是直接调用这个变量对象中的方法 第二个就是直接使用强制转换的方法
+    * */
+//    转布尔值
+    /*1、Boolean()
+     *除了false 0 "" NaN Undefined 在转化的时候会变成false以外 其他的都会转换成true 包括字符串"false"也会转成true
+     * */
+
+
+
+//    隐式转换
+//    隐式转成number
+    /*直接在要转换的内容前加上“+”
+    * var a="123";  //a=+a;
+    * var a="123";  b=a*2;  //246
+      * + - * / %   加减乘除模 都可以转换
+    * */
+//    隐式转换成字符
+    /*var a=123; a=a+"";
+    * */
+//    隐式转换成布尔值
+     /*var a=123
+     if a{
+        true；
+     }
+     * */
+
+
+
+//    for(var i=0;i<10;i++){
+//        console.log(i);
+//    }
+//
+//    console.log(b); /*undefined  声明了没赋值  变量名提升 值不提升*/
+//    //console.log(c);/*报错 not defined 没有定义*/
+//    var b=1;
+//    c=2;
+//    console.log(b);
+//    console.log(c);
+
+//function bb(){
+//    var m=n=33;
+//    /*m是局部变量 n是全局变量
+//    * 实际等价于 var m=33; n=33;
+//    * */
+//}
+//bb();
+//console.log(m); not defined
+//console.log(n); 33
+//    var ww=prompt("123");
+//console.log(typeof ww);
+
+
+//var a="123"; a=a+2;
+//console.log(a);
+
+
+
+//    a>b?c=a:c=b;
+//    c=a>b?a:b
+//if(a>b){
+//    c=a;
+//}else{
+//    c=b;
+//}
+//var a=3;
+//while(a>0){
+//    /*会一直循环*/
+//    alert(1)
+//}
+
+
+//    var ff=prompt("aa");
+//    var mm=prompt("bb");
+//    while(true){
+//        if(ff=="liwan" && mm=="123"){
+//            console.log("登录成功");
+//            break;
+//        }else{
+//            ff=prompt("aa");
+//            mm=prompt("bb");
+//        }
+//    }
+
+//    for(var i=0;i<5;i++){
+//        if(i==3){
+//            continue;
+//        }
+//        console.log(i);
+//    }
+
+
+
+//var j=0;
+//    do{
+//        j++;
+//        console.log(j);
+//    }while(j<3);
+
+//    var q=0;
+//    while(q<5){
+//        console.log(q);
+//        q++;
+//    }
+
+
+    /*var s=0;
+
+    for(var i=1;i<101;i++){
+        s=i+s;
+    }
+    console.log(s);
+
+    var sum=0;
+    var j=0;
+    do{
+        j++;
+        sum=j+sum;
+    }while(j<100);
+    console.log(sum);
+
+    var m=0;
+    var ss=0;
+    while(m<100){
+        m++;
+        ss=m+ss;
+    }
+    console.log(ss);*/
+
+
+/*var a=new Object();/!*注意大写*!/
+a.name="aaa";
+a.sex="nv";
+a.age="11";
+var ff="name";
+console.log(a);/!*{name: "aaa", sex: "nv", age: "11"}*!/
+console.log(a.name);/!*aaa*!/
+console.log(a.ff);/!*undefined    会在a里面去找ff*!/
+console.log(a[ff]);/!*aaa   采用下脚标 利用ff=“name” 来找到aaa*!/*/
+//var a={name: "aaa", sex: "nv", age: "11"};
+
+    /*var b=new Array();
+    b[0]="sss";
+    b[1]=123;
+    b[2]="alalal";
+    b[3]=234;
+console.log(b);/!*(4) ["sss", 123, "alalal", 234]*!/
+b[10]=1211;
+console.log(b);/!*(11) ["sss", 123, "alalal", 234, undefined × 6, 1211]*!/*/
+//var b=["sss", 123, "alalal", 234];
+
+    /*var m="asjskddfl";/!*字符串也可以看成一个数组*!/
+    for(var i=0;i< m.length;i++){
+        console.log(m[i]);
+    }
+*/
+
+
+
+   /* ///声明创建一个函数有三种方法
+    var hh=new Function();
+    var mm=function(){}/!*函数表达式  必须在函数体下面调用*!/
+    function dd(){}/!*函数声明式  提升函数体和函数名  可以在函数体前面调用*!/
+*/
+
+    /*function sum(a,b){
+        console.log(a + b);
+    }
+    sum(2,4);
+    function bg(m){
+        if(m.length>1){
+            for(var i=0;i< m.length;i++){
+                m[i].style.background="red";
+            }
+        }else{
+            m.style.background="red";
+        }
+
+    }
+    var box=document.getElementsByClassName("box");
+
+
+for(var i=0;i<box.length;i++){
+    box[i].onclick=function(){
+        bg(box);
+    };
+}
+
+var box1=document.getElementsByClassName("box1")[0];
+
+box1.onclick=function(){
+        bg(box1);
+    };*/
+
+
+/*function mm(){
+    console.log(1);
+}
+    var tt=mm();
+console.log(tt);/!*undefined*!/
+function nn(){
+    return 1;
+}
+    var kk=nn();
+console.log(kk);/!*1*!/
+    //函数有return 则返回return后面的内容 否则 返回 undefined*/
+
+
+    var a="w"-2;
+    var b="w"-2;
+console.log(a);
+console.log(b);
+
+console.log(typeof a);
+console.log(typeof b);
+    if(a==b){
+        console.log(1);
+    }else{
+        console.log(2);
+    }
+</script>
+</html>
